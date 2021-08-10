@@ -1,0 +1,49 @@
+{
+  "paths": [
+    {
+      "name": "/items",
+      "lambdaFunction": "StrawberryAPILambdaFunction",
+      "privacy": {
+        "protected": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ],
+        "unauth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/items"
+    }
+  ],
+  "resourceName": "StrawberryAPI",
+  "apiName": "StrawberryAPI",
+  "functionArns": [
+    {
+      "lambdaFunction": "StrawberryAPILambdaFunction"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 1,
+    "authRoleName": "amplify-myapp-dev-140005-authRole",
+    "unAuthRoleName": "amplify-myapp-dev-140005-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "StrawberryAPILambdaFunction",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
