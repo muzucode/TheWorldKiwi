@@ -14,3 +14,4 @@ applyPolyfills().then(() => {
 Amplify.configure(awsconfig);
 
 createApp(App).use(router).mount('#app');
+//rebuild please!
