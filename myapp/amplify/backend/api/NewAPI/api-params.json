@@ -1,0 +1,49 @@
+{
+  "paths": [
+    {
+      "name": "/items",
+      "lambdaFunction": "NewAPILambdaFunction",
+      "privacy": {
+        "protected": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ],
+        "unauth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/items"
+    }
+  ],
+  "resourceName": "NewAPI",
+  "apiName": "NewAPI",
+  "functionArns": [
+    {
+      "lambdaFunction": "NewAPILambdaFunction"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 1,
+    "authRoleName": "amplify-myapp-dev-140005-authRole",
+    "unAuthRoleName": "amplify-myapp-dev-140005-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "NewAPILambdaFunction",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

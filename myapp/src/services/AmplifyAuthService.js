@@ -38,6 +38,44 @@ class AmplifyAuthService {
     }
   }
 
+  async resendConfirmationCode(username) {
+    try {
+        await Auth.resendSignUp(username);
+        console.log('code resent successfully');
+    } catch (err) {
+        console.log('error resending code: ', err);
+    }
+  }
+
+  async signOut() {
+    try {
+        await Auth.signOut();
+        console.log('User has been signed out');
+    } catch (error) {
+        console.log('error signing out: ', error);
+    }
+  }
+
+  async currentSession(){
+    Auth.currentSession()
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
+  }
+
+  async forgotPassword(username) {
+    // Send confirmation code to user's email
+    Auth.forgotPassword(username)
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
+  }
+
+  async forgotPasswordSubmit(username, code, new_password){
+    // Collect confirmation code and new password, then
+    Auth.forgotPasswordSubmit(username, code, new_password)
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
+  }
+  
 }
 
 

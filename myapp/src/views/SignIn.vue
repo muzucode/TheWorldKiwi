@@ -12,6 +12,7 @@
         <label for="exampleInputPassword1" class="mt-3">Password</label>
         <!-- V-model password -->
         <input v-model="password" type="password" class="form-control  w-25 mx-auto" id="exampleInputPassword1" placeholder="Password">
+        <small id="emailHelp" class="form-text text-muted"><router-link to="/forgot-password">Forgot password?</router-link></small>
       </div>
       <button @click="signIn" type="button" class="btn btn-lg w-25 btn-secondary mt-5">Submit</button>
     </form>

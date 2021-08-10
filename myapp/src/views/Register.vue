@@ -41,7 +41,8 @@ export default {
   },
   methods: {
     signUp: function () {
-      AmplifyAuthService.signUp(this.username, this.password, this.email, this.phone_number);
+      AmplifyAuthService.signUp(this.username, this.password, this.email, this.phone_number)
+      .then(this.$router.push({ name: 'Verify' }));
     }
   },
   components: {

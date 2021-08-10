@@ -1,7 +1,8 @@
 <template>
   <MainCard>
-    <h1 class="display-4 mb-5">Verify</h1>
-
+    <h1 class="display-4">Verify</h1>
+    <p class="mt-3 font-italic">Enter your username and the verification code sent to your email below</p>
+    <p class="mb-5 font-italic"><router-link to="/verify/resend-verification">Resend verification code</router-link></p>
     <form>
       <div class="form-group">
         <label for="exampleInputUsername">Username</label>
@@ -11,7 +12,7 @@
       <div class="form-group">
         <label for="exampleInputPassword1" class="mt-3">Verification Code</label>
         <!-- V-model password -->
-        <input v-model="verification_code" class="form-control  w-25 mx-auto" id="exampleInputPassword1" placeholder="Verification Code">
+        <input v-model="verification_code" class="form-control  w-25 mx-auto" id="exampleInputPassword1" placeholder="Verification code">
       </div>
       <button @click="confirmSignUp" type="button" class="btn btn-lg w-25 btn-secondary mt-5">Submit</button>
     </form>

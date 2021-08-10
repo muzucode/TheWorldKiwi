@@ -1,6 +1,6 @@
 {
     "identityPoolName": "myappba4e6fc9_identitypool_ba4e6fc9",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "myappba4e6fc9",
     "userPoolName": "myappba4e6fc9_userpool_ba4e6fc9",
     "autoVerifiedAttributes": [

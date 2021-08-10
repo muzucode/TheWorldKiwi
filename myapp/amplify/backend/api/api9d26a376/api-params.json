@@ -1,0 +1,49 @@
+{
+  "paths": [
+    {
+      "name": "/items",
+      "lambdaFunction": "GetItems",
+      "privacy": {
+        "protected": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ],
+        "unauth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/items"
+    }
+  ],
+  "resourceName": "api9d26a376",
+  "apiName": "api9d26a376",
+  "functionArns": [
+    {
+      "lambdaFunction": "GetItems"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 1,
+    "authRoleName": "amplify-myapp-dev-140005-authRole",
+    "unAuthRoleName": "amplify-myapp-dev-140005-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "GetItems",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

@@ -2,15 +2,38 @@
 <div class="main">
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
     <router-link to="/register">Register</router-link> |
-    <router-link to="/signin">Sign In</router-link> | 
-    <router-link to="/verify">Verify</router-link>
+    <router-link to="/verify">Verify</router-link> |
+    <router-link to="/signin">Sign In</router-link> |
+    <router-link @click="signOut" to="/signout">Sign Out</router-link>
+    <button @click="currentSession">Session</button>
 
   </div>
   <router-view/>
 </div>
 </template>
+
+<script>
+import AmplifyAuthService from './services/AmplifyAuthService.js';
+
+export default {
+  name: "App",
+  data: function () {
+    return {
+      signedin: Boolean,
+      userid: ''
+    }
+  },
+  methods: {
+    signOut: function () {
+      AmplifyAuthService.signOut();
+    },
+    currentSession: function (){
+      AmplifyAuthService.currentSession();
+    }
+  }
+}
+</script>
 
 <style>
 .main{
