@@ -19,11 +19,15 @@
       "function": {
         "GetItems": {
           "deploymentBucketName": "amplify-myapp-master-180747-deployment",
-          "s3Key": "amplify-builds/GetItems-6558536f393139526d59-build.zip"
+          "s3Key": "amplify-builds/GetItems-617763304f3142577645-build.zip"
         },
         "NewAPILambdaFunction": {
           "deploymentBucketName": "amplify-myapp-master-180747-deployment",
-          "s3Key": "amplify-builds/NewAPILambdaFunction-705a31374e694f496577-build.zip"
+          "s3Key": "amplify-builds/NewAPILambdaFunction-6f35766c64686b6a384e-build.zip"
+        },
+        "StrawberryAPILambdaFunction": {
+          "deploymentBucketName": "amplify-myapp-master-180747-deployment",
+          "s3Key": "amplify-builds/StrawberryAPILambdaFunction-5033785a7662542f6648-build.zip"
         }
       }
     }
@@ -49,10 +53,6 @@
         "GetItems": {
           "deploymentBucketName": "amplify-myapp-dev-140005-deployment",
           "s3Key": "amplify-builds/GetItems-617763304f3142577645-build.zip"
-        },
-        "NewAPILambdaFunction": {
-          "deploymentBucketName": "amplify-myapp-dev-140005-deployment",
-          "s3Key": "amplify-builds/NewAPILambdaFunction-6f35766c64686b6a384e-build.zip"
         },
         "StrawberryAPILambdaFunction": {
           "deploymentBucketName": "amplify-myapp-dev-140005-deployment",
