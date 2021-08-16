@@ -1,0 +1,7 @@
+{
+  "description": {"S": "Amazon DynamoDB"},
+  "img": {"S": "New discussion thread"},
+  "ItemId": {"S": "First post in this thread"},
+  "name": {"S": "fred@example.com"},
+  "rarity": {"S": "201603190422"}
+}

@@ -1,0 +1,37 @@
+{
+  "Items": [
+      {
+          "PutRequest": {
+              "Item": {
+                "ItemId" : {"S": "0001"},
+                "description": {"S": "Little man takes on big world"},
+                "img": {"S": "link"},
+                "name": {"S": "Bonaparte Portrait"},
+                "rarity": {"S": "7"}
+              }
+          }
+      },
+      {
+          "PutRequest": {
+            "Item": {
+              "ItemId" : {"S": "0002"},
+              "description": {"S": "deadmau5 Helmet, who can deny"},
+              "img": {"S": "link"},
+              "name": {"S": "deadmau5 helmet"},
+              "rarity": {"S": "20"}
+            }
+          }
+      },
+      {
+          "PutRequest": {
+            "Item": {
+              "ItemId" : {"S": "0003"},
+              "description": {"S": "Daft Punk duo brought to you by us"},
+              "img": {"S": "New discussion thread"},
+              "name": {"S": "Daft Punk"},
+              "rarity": {"S": "99"}
+            }
+          }
+      }
+  ]
+}

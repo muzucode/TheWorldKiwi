@@ -14,7 +14,7 @@
   </MainCard>
   <button @click="generateWork" type="button" class="btn btn-lg btn-secondary mt-5 w-25">Generate</button>
   <button @click="getReq" type="button" class="btn btn-lg btn-secondary mt-5 w-25">Send get request</button>
-  <button @click="rollRand" type="button" class="btn btn-lg btn-secondary mt-5 w-25">Random #</button>
+  <button @click="rollRand, loadWork" type="button" class="btn btn-lg btn-secondary mt-5 w-25">Random #</button>
 
 </div>
 </template>
@@ -66,14 +66,18 @@ export default {
         this.winMessage = 'Legendary';
       } 
     },
+    loadWork: function () {
+      AmplifyAPIService.loadWork();
+    },
     rollRand: function() {
       // Generate random number
       const rand = Math.round(Math.random(1) * 100);
       this.rand = rand;
       this.setWinMessage(rand);
+      this.loadWork(rand);
     }
   },
-  created: function() {
+  activated: function() {
     this.rollRand();
   }
 }

@@ -79,6 +79,19 @@ class AmplifyAPIService {
 
    return response
   }
+
+  loadWork(){
+    const response = API.get(apiName, '/items/load')
+    .then(res => {
+      // Add your code here
+      console.log(res);
+    })
+    .catch(error => {
+      console.log(error.response);
+   });
+
+   return response
+  }
 }
 
 
