@@ -15,7 +15,7 @@
   <button @click="generateWork" type="button" class="btn btn-lg btn-secondary mt-5 w-25">Generate</button>
   <button @click="getReq" type="button" class="btn btn-lg btn-secondary mt-5 w-25">Send get request</button>
   <button @click="rollRand, loadWork" type="button" class="btn btn-lg btn-secondary mt-5 w-25">Random #</button>
-
+<!-- rebuild -->
 </div>
 </template>
 
